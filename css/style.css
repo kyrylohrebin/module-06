@@ -31,6 +31,7 @@ a {
     font-weight: bold;
     line-height: 1.2;
     cursor: pointer;
+    margin: 0;
 }
 
 .logo a {
@@ -47,7 +48,9 @@ a {
 }
 
 .menu a {
+    padding: 10px 0 10px;
     color: #95e1d3;
+    transition: color 0.2s linear, border-bottom 0.2s linear;
 }
 
 .menu-item {
@@ -56,4 +59,50 @@ a {
     text-transform: uppercase;
     line-height: 1.2;
     font-weight: bold;
+}
+
+.menu-item:hover a{
+    color: #f38181;
+    border-bottom: 3px solid #f38181;
+}
+
+.services-heading {
+    margin: 0;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.services-list-item {
+    max-width: 382px;
+    position: relative;
+}
+
+
+.services-list-item::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    top: 0;
+    left: 0;
+}
+
+.services-list-item__heading_photo::before {
+    background-image: url(../img/ALARM.png);
+    position: absolute;
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    top: 0;
+    left: 0;
 }
