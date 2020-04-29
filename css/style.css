@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 html {
     box-sizing: border-box;
@@ -69,24 +70,68 @@ a {
 .services-heading {
     margin: 0;
     text-align: center;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.services-heading span {
+    font-size: 24px;
+    font-family: "Kaushan Script", cursive;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-transform: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.services-heading::after {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 40px auto 66px;
 }
 
 .services-list {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
 }
 
-.services-list-item {
-    max-width: 382px;
+.services-list-item__heading {
+    margin: 0 0 20px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.services-list-item__text {
+    margin: 0 0 92px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+}
+
+.services-list__item {
+    max-width: 355px;
+    padding-left: 60px;
     position: relative;
+    box-sizing: border-box;
 }
 
-
-.services-list-item::before {
+.services-list__item::before {
     position: absolute;
     display: block;
     content: '';
@@ -96,13 +141,26 @@ a {
     left: 0;
 }
 
-.services-list-item__heading_photo::before {
-    background-image: url(../img/ALARM.png);
-    position: absolute;
-    display: block;
-    content: '';
-    width: 32px;
-    height: 32px;
-    top: 0;
-    left: 0;
+.services-list__item_photo::before {
+    background-image: url(../img/clock.png);
+}
+
+.services-list__item_web::before {
+    background-image: url(../img/graph.png);
+}
+
+.services-list__item_creat::before {
+    background-image: url(../img/comp.png);
+}
+
+.services-list__item_seo::before {
+    background-image: url(../img/book.png);
+}
+
+.services-list__item_css::before {
+    background-image: url(../img/home.png);
+}
+
+.services-list__item_digital::before {
+    background-image: url(../img/image.png);
 }
