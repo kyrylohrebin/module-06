@@ -62,7 +62,7 @@ a {
     font-weight: bold;
 }
 
-.menu-item:hover a{
+.menu-item:hover:focus a {
     color: #f38181;
     border-bottom: 3px solid #f38181;
 }
@@ -164,3 +164,177 @@ a {
 .services-list__item_digital::before {
     background-image: url(../img/image.png);
 }
+
+.team-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.team-heading {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.team-heading span {
+    font-size: 24px;
+    font-family: "Kaushan Script", cursive;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-transform: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.team-heading::after {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 40px auto 66px;
+}
+
+.services-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.about-team {
+    margin: 0 0 92px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.member-heading {
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 14px;
+}
+
+.member-description {
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .team-list__item {
+    width: 370px;
+    position: relative;
+  }
+  
+  .social-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.social-list__item {
+    width: 58px;
+    height: 58px;
+    background-repeat: no-repeat;
+    background-color: rgb(252, 227, 138);
+    background-position: center;
+}
+
+.social-list__item:not(:last-child) {
+margin-right: 1px;
+}
+
+.facebook {
+    background-image: url(../img/facebook.png);
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);
+}
+
+.pinterest {
+    background-image: url(../img/pinterest.png);
+}
+
+.instagram {
+    background-image: url(../img/instagram.png);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
+.card-box {
+position: relative;
+margin-bottom: 30px;
+transition: transform 0.2s linear;
+}
+
+.overlay {
+background-image: linear-gradient(180deg,  rgb(243,129,129) 0%, rgb(252,227,138) 100%);
+margin-bottom: 30px;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.2s linear;
+}
+
+.card-box:hover .overlay {
+    opacity: 0.9;
+    visibility: visible;
+  }
+
+  
+  .card-box:hover .social-list__item a{
+    opacity: 1;
+  }
+
+  .Rectangle_14 {
+    background-image: -moz-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    position: absolute;
+    left: 350px;
+    top: 970px;
+    width: 380px;
+    height: 470px;
+    z-index: 19;
+  }
+  
