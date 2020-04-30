@@ -33,12 +33,17 @@ a {
     line-height: 1.2;
     cursor: pointer;
     margin: 0;
+    transition: scale 0.2s linear;
 }
 
 .logo a {
     color: #95e1d3;
 }
-  
+
+.logo:hover {
+    scale: 1.2;
+}
+
 .menu {
     min-width: 490px;
     list-style: none;
@@ -62,7 +67,7 @@ a {
     font-weight: bold;
 }
 
-.menu-item:hover:focus a {
+.menu-item:hover a{
     color: #f38181;
     border-bottom: 3px solid #f38181;
 }
@@ -262,10 +267,22 @@ a {
     background-repeat: no-repeat;
     background-color: rgb(252, 227, 138);
     background-position: center;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.social-list__item a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .social-list__item:not(:last-child) {
 margin-right: 1px;
+}
+
+.social-list__item:hover {
+    background-color: #95e1d3;
 }
 
 .facebook {
@@ -300,11 +317,11 @@ margin-right: 1px;
 .card-box {
 position: relative;
 margin-bottom: 30px;
-transition: transform 0.2s linear;
+transition: transform 0.2s linear, box-shadow 0.2s linear;
 }
 
 .overlay {
-background-image: linear-gradient(180deg,  rgb(243,129,129) 0%, rgb(252,227,138) 100%);
+background-image: linear-gradient(to top, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%);
 margin-bottom: 30px;
 width: 100%;
 height: 100%;
@@ -316,25 +333,12 @@ opacity: 0;
 transition: opacity 0.2s linear;
 }
 
+.card-box:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px #95e1d3;
+}
+
 .card-box:hover .overlay {
-    opacity: 0.9;
+    opacity: 1;
     visibility: visible;
   }
-
-  
-  .card-box:hover .social-list__item a{
-    opacity: 1;
-  }
-
-  .Rectangle_14 {
-    background-image: -moz-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
-    position: absolute;
-    left: 350px;
-    top: 970px;
-    width: 380px;
-    height: 470px;
-    z-index: 19;
-  }
-  
