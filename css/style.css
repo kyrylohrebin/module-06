@@ -219,12 +219,13 @@ a {
 }
 
 .about-team {
-  margin: 0 0 92px;
+  margin: 0 auto 92px;
   font-size: 15px;
   font-family: "Roboto";
   color: rgb(153, 153, 153);
   line-height: 1.6;
   text-align: center;
+  max-width: 950px;
 }
 
 .member-heading {
@@ -339,12 +340,12 @@ a {
   transition: opacity 0.2s linear;
 }
 
-.card-box:hover {
+.team-list__item:hover .card-box{
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0px #95e1d3;
 }
 
-.card-box:hover .overlay {
+.team-list__item:hover .overlay {
   opacity: 1;
   visibility: visible;
 }
