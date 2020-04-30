@@ -8,6 +8,7 @@ html {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 a {
@@ -15,7 +16,7 @@ a {
 }
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -247,8 +248,9 @@ a {
   }
   
   .team-list__item {
-    width: 370px;
+    max-width: 370px;
     position: relative;
+    margin-bottom: 80px;
   }
   
   .social-list {
@@ -341,4 +343,70 @@ transition: opacity 0.2s linear;
 .card-box:hover .overlay {
     opacity: 1;
     visibility: visible;
+  }
+
+  .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 62px;
+      border-top: 1px solid rgba(140, 140, 140, 0.3);
+  }
+
+  .footer__text {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+  }
+
+  .footer__link {
+    color: #f38181;
+    transition: text-shadow 0.2s linear, scale 0.2s linear;
+  }
+
+  .footer__link:hover {
+      text-shadow: 0px 0px 4px #f38181;
+      scale: 1.25;
+  }
+
+  .form {
+      display: flex;
+      padding: 0;
+      margin: 0;
+  }
+
+  .button {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    width: 150px;
+    min-height: 40px;
+    background-color: #95e1d3;
+    border: none;
+  }
+
+  .form__input {
+    display: block;
+    box-sizing: border-box;
+    width: 230px;
+    height: 40px;
+    border: 1px solid rgba(140, 140, 140, 0.3);
+    padding: 5px 0 0;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
   }
